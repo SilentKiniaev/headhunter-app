@@ -1,0 +1,26 @@
+.settings-body{
+  min-height: 100vh;
+  margin: 5px;
+}
+.choices{
+
+}
+.towns-choice-variants{
+  position: absolute;
+  border: solid 1px;
+  background: white;
+  max-height: 400px;
+  width: auto;
+  overflow: scroll;
+  overflow-x:hidden;
+  border: solid 1px;
+  border-radius: 3px;
+  margin-top: 3px;
+  padding: 2px;
+}
+.towns-choice-variants >div:hover{
+  background: #7caaf4;
+}
+.towns-choice-searching{
+  width: 200px;
+}

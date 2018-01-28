@@ -1,0 +1,23 @@
+<div class="vacancies-body">
+  <div class="vacancies-head">
+    <div class="vacancies-name">
+        <a target="_blank" [routerLink]="['/vacancies',vacancy.id]">{{vacancy.name}}</a>
+    </div>
+    <div class="vacancies-salary" *ngIf="vacancy.salary !== null">
+      <p>
+        <span *ngIf="vacancy.salary.from !== null">От {{vacancy.salary.from}} </span>
+        <span *ngIf="vacancy.salary.to !== null">до {{vacancy.salary.to}}</span>
+        <span> {{vacancy.salary.currency}}</span>
+      </p>
+    </div>
+  </div>
+  <div class="vacancies-company"><p>{{vacancy.employer.name}}</p></div>
+  <div class="vacancies-content">
+    <p class="e2e-inner-html-bound" [innerHTML]=vacancy.snippet.requirement></p>
+    <p class="e2e-inner-html-bound" *ngIf="vacancy.snippet.hasOwnProperty('responsibility')" [innerHTML]=vacancy.snippet.responsibility></p>
+  </div>
+  <div class="vacancies-date">
+    <p>{{date.toLocaleString("ru",this.options)}}</p>
+    <!--<p>{{date | date}}</p>-->
+  </div>
+</div>

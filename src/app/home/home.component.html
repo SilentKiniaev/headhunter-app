@@ -1,0 +1,22 @@
+<div class="home-body">
+
+  <div class="input-group input-group-lg vacancies-search">
+    <span class="input-group-addon" id="sizing-addon1">Поиск вакансий</span>
+    <input [(ngModel)]="searchString" (ngModelChange)="findVacancies()" [minlength]="minLength"
+           type="text" class="form-control vacancies-search-input"
+           placeholder="Искать..." aria-label="Search" aria-describedby="sizing-addon1"
+    >
+  </div>
+
+  <div class="home-content">
+    <div class="vacancies-content">
+      <div *ngIf="isLoaded" class="vacancies-number">
+        <p>Найдено {{vacancies.length}} вакансий по запросу «{{searchString}}»</p>
+      </div>
+      <div *ngIf="isLoaded" class="vacancies-list">
+        <app-vacancies *ngFor="let vacancy of vacancies" [vacancy] = vacancy></app-vacancies>
+      </div>
+    </div>
+  </div>
+
+</div>

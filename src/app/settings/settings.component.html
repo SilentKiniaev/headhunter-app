@@ -1,0 +1,27 @@
+<div class="settings-body">
+  <div class="choices">
+    <div class="towns-choice">
+      <div class="choices-description">
+          <span>Город:</span>
+      </div>
+      <div>
+        <input type="text" [(ngModel)]="townSearching" (input)="townSearchingInput()" class="towns-choice-searching form-control">
+        <div class="towns-choice-variants" [hidden]="!townsAvailable || townSearching.length === 0">
+          <div *ngFor="let town of towns | townFilter:townSearching" (click)="setCurrentTown(town.id,town.name)">{{town.name}}</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="period-choice">
+      <div class="choices-description">
+          <span>Период:</span>
+      </div>
+      <div>
+        <select id="period" class="towns-choice-select custom-select" #p (change)="setCurrentPeriod(p.value)">
+          <option *ngFor="let period of periods" [value]=period.id>{{period.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+

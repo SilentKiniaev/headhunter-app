@@ -1,0 +1,32 @@
+.vacancy-body{
+  display: table;
+  margin: auto;
+  padding: 10px;
+  word-wrap: break-word;
+  font-family: chicago;
+}
+.vacancy-head{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: cornsilk;
+}
+.vacancy-head > div{
+  display: inline-block;
+  padding-top: 20px;
+  padding-right: 150px;
+  padding-left: 20px;
+}
+.vacancy-head-item{
+  font-weight: bold;
+}
+.vacancy-name{
+  font-size: 30px;
+}
+.vacancy-employer{
+  font-size: 22px;
+  color: cornflowerblue;
+}
+agm-map{
+  height: 200px;
+  width: 600px;
+}

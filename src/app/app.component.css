@@ -1,0 +1,17 @@
+.app-menu{
+  height: 50px;
+  background: dimgray;
+
+}
+.app-menu a{
+  color: white;
+  display: inline-block;
+}
+.app-menu a:hover{
+  color: gray;
+}
+.app-footer{
+  height: 300px;
+  background: dimgray;
+}
+

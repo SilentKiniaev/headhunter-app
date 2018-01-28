@@ -1,0 +1,56 @@
+<div class="vacancy-body">
+  <div class="vacancy-name">
+    <p>{{vacancy.name}}</p>
+  </div>
+  <div class="vacancy-employer">
+    <p>{{vacancy.employer.name}}</p>
+  </div>
+  <div class="vacancy-date">
+    <p>Дата публикации: <i>{{date.toLocaleString("ru",this.options)}}</i></p>
+  </div>
+  <div class="vacancy-head">
+    <div class="vacancy-salary" *ngIf="vacancy.salary !== null">
+      <p>
+        Зарпалата:
+      </p>
+      <p class="vacancy-head-item">
+        <span *ngIf="vacancy.salary.from !== null">От {{vacancy.salary.from}} </span>
+        <span *ngIf="vacancy.salary.to !== null">до {{vacancy.salary.to}}</span>
+        <span> {{vacancy.salary.currency}}</span>
+      </p>
+    </div>
+    <div class="vacancy-city">
+      <p>Город: </p>
+      <p class="vacancy-head-item">{{vacancy.area.name}}</p>
+    </div>
+    <div class="vacancy-experience">
+      <p>Опыт работы: </p>
+      <p class="vacancy-head-item">{{vacancy.experience.name}}</p>
+    </div>
+  </div>
+  <div class="vacancy-description">
+    <p class="e2e-inner-html-bound" [innerHTML]=vacancy.description></p>
+  </div>
+  <div class="vacancy-employment">
+    <p><b>Тип занятости:</b> </p>
+    <p>{{vacancy.employment.name}}</p>
+  </div>
+  <div class="vacancy-address" *ngIf="vacancy.address !== null">
+    <p><b>Адрес:</b> </p>
+    <p>
+      <span *ngIf="vacancy.address.city !== null">{{vacancy.address.city}}</span>
+      <span *ngIf="vacancy.address.street !== null">, {{vacancy.address.street}}</span>
+      <span *ngIf="vacancy.address.building !== null">{{vacancy.address.building}}</span>
+    </p>
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </div>
+
+</div>
+
+
+
+
+
+

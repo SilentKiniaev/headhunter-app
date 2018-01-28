@@ -1,0 +1,42 @@
+.vacancies-body{
+  width: 80%;
+  height: auto;
+  border: solid 1px;
+  word-wrap: break-word;
+  margin-left: 10%;
+  margin-bottom: 5px;
+}
+.vacancies-date{
+  text-align: right;
+}
+.vacancies-body > div{
+  margin-left: 5px;
+}
+.vacancies-name{
+
+  font-size: 22px;
+}
+.vacancies-name a{
+  color: cadetblue;
+}
+.vacancies-name a:hover{
+  text-decoration: none;
+  color: cornflowerblue;
+}
+.vacancies-company, .vacancies-date{
+  color: gray;
+}
+.vacancies-company{
+  font-size: 14px;
+}
+.vacancies-date{
+  font-size: 16px;
+  margin-right: 10px;
+}
+.vacancies-content{
+  color: black;
+  font-size: 16px;
+}
+.vacancies-salary{
+  font-size: 17px;
+}

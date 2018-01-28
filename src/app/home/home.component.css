@@ -1,0 +1,26 @@
+.home-body{
+  margin: 10px;
+}
+.home-body > div {
+  margin-bottom: 15px;
+}
+.home-content{
+  display: table;
+  min-height: 100vh;
+}
+.home-content > div{
+  display: table-cell;
+}
+.vacancies-content{
+  /*width: 80%;*/
+}
+.vacancies-list{
+  /*display: table;*/
+  /*margin: auto;*/
+}
+.vacancies-search-input{
+  width: 500px;
+}
+.vacancies-number{
+  font-size: 20px;
+}
