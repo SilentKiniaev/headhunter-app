@@ -1,15 +1,15 @@
 <div class="vacancy-body">
   <div class="vacancy-name">
-    <p>{{vacancy.name}}</p>
+    <p>{{vacancy['name']}}</p>
   </div>
   <div class="vacancy-employer">
-    <p>{{vacancy.employer.name}}</p>
+    <p>{{vacancy['employer'].name}}</p>
   </div>
   <div class="vacancy-date">
     <p>Дата публикации: <i>{{date.toLocaleString("ru",this.options)}}</i></p>
   </div>
   <div class="vacancy-head">
-    <div class="vacancy-salary" *ngIf="vacancy.salary !== null">
+    <div class="vacancy-salary" *ngIf="vacancy['salary'] !== null">
       <p>
         Зарпалата:
       </p>
@@ -21,21 +21,21 @@
     </div>
     <div class="vacancy-city">
       <p>Город: </p>
-      <p class="vacancy-head-item">{{vacancy.area.name}}</p>
+      <p class="vacancy-head-item">{{vacancy['area'].name}}</p>
     </div>
     <div class="vacancy-experience">
       <p>Опыт работы: </p>
-      <p class="vacancy-head-item">{{vacancy.experience.name}}</p>
+      <p class="vacancy-head-item">{{vacancy['experience'].name}}</p>
     </div>
   </div>
   <div class="vacancy-description">
-    <p class="e2e-inner-html-bound" [innerHTML]=vacancy.description></p>
+    <p class="e2e-inner-html-bound" [innerHTML]=vacancy['description']>
   </div>
   <div class="vacancy-employment">
     <p><b>Тип занятости:</b> </p>
-    <p>{{vacancy.employment.name}}</p>
+    <p>{{vacancy['employment'].name}}</p>
   </div>
-  <div class="vacancy-address" *ngIf="vacancy.address !== null">
+  <div class="vacancy-address" *ngIf="vacancy['address'] !== null">
     <p><b>Адрес:</b> </p>
     <p>
       <span *ngIf="vacancy.address.city !== null">{{vacancy.address.city}}</span>
