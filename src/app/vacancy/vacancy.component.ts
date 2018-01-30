@@ -11,6 +11,7 @@ export class VacancyComponent implements OnInit {
   id: string;
   vacancy = {};
   date: Date;
+  description;
   options = {
     month: 'long',
     day: 'numeric'
@@ -26,7 +27,8 @@ export class VacancyComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.vacanciesService.getVacancy(this.id).subscribe(object => {
       this.vacancy = object;
-      this.date = new Date(this.vacancy["created_at"]);
+      this.description = this.vacancy['description'];
+      this.date = new Date(this.vacancy['created_at']);
       if (this.vacancy['address'] !== null) {
         this.lat = this.vacancy['address'].lat;
         this.lng = this.vacancy['address'].lng;
